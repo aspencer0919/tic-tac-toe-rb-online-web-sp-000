@@ -90,7 +90,6 @@ end
 def draw?(board)
   if full?(board) && !won?(board)
     return true
-    puts "Cat's Game!"
   end
 end
 
@@ -107,9 +106,13 @@ def winner(board)
 end
 
 def play(board)
-  moves = 1
-  until moves == 10
+  until over?(board)
     turn(board)
-    moves += 1
+  end
+  if won?(board)
+    winner(board) == "X" || winner(board) == "O"
+    puts "Congratulations #{winner(board)}!"
+  elseif draw?(board)
+    puts "Cat's Game!"
   end
 end
