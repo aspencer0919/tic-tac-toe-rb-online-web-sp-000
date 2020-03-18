@@ -23,7 +23,6 @@ def input_to_index(user_input)
 end
 
 def move(board, index, player)
-  turn_count(board) = current_player
   board[index] = player
 end
 
@@ -40,7 +39,7 @@ def turn(board)
   input = gets.strip
   index = input_to_index(input)
   if valid_move?(board, index)
-    move(board, index)
+    move(board, index, current_player(board))
     display_board(board)
   else
     turn(board)
