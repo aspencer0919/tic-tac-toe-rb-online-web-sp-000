@@ -117,4 +117,5 @@ def play(board)
       puts "Cat's Game!"
     end
   end
+  turn(board)
 end
