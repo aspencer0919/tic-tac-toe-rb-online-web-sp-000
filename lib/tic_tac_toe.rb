@@ -70,9 +70,9 @@ WIN_COMBINATIONS = [
   [2,4,6]
 ]
 
-def position_taken?(board, index)
-  !(board[index].nil? || board[index] == " ")
-end
+#def position_taken?(board, index)
+#  !(board[index].nil? || board[index] == " ")
+#end
 
 def won?(board)
   WIN_COMBINATIONS.each do |win_combination|
