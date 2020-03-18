@@ -98,6 +98,7 @@ end
 def draw?(board)
   if full?(board) && !won?(board)
     return true
+    puts "Cat's Game!"
   end
 end
 
